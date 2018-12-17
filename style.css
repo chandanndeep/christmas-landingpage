@@ -1,0 +1,324 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+.x-btn {
+	color: #fff;
+    background-color: #fb2324;
+	padding: 15px 48px;
+	border-radius: 160px;
+	display: inline-block;
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.x-btn:hover,
+.x-btn:focus {
+	box-shadow: 0px 5px 30px 5px rgba(251, 35, 36, 0.4);
+}
+
+.wrapper {
+	max-width: 1920px;
+	width: 100%;
+	margin: auto;
+}
+
+.wrapper p {
+	color: #000;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper a {
+	font-size: 16px;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/** Start banner **/
+.banner {
+	background-image: url("images/body-bg.png");
+	background-repeat: no-repeat;
+	background-position: right top;
+	width: 100%;
+	padding-bottom: 360px;
+	position: relative;
+}
+
+.banner .banner-inner {
+	max-width: 1170px;
+	width: 100%;
+	margin: auto;
+}
+
+.banner .banner-inner .logo {
+	padding-top: 55px;
+}
+
+.banner .offer {
+	margin-top: 170px;
+	width: 100%;
+	display: flex;
+}
+
+.banner .offer .content {
+	margin-right: auto;
+}
+
+.banner .offer .content .off-precent {
+	color: #000;
+	font-size: 208px;
+	font-weight: 800;
+	font-family: 'Nunito', sans-serif;
+	line-height: 1;
+}
+
+.banner .offer .content .off-precent sup {
+	color: #fb2324;
+	font-size: 110px;
+	font-weight: 500;
+}
+
+.banner .offer .content .off-precent span {
+	font-size: 54px;
+    font-weight: 700;
+    margin-left: -85px;
+}
+
+.banner .offer .content .number-counter {
+	
+}
+
+.banner .offer .content .number-counter > div {
+	min-width: 63px;
+	display: inline-block;
+	border: 2px solid #e1e1e1;
+	border-radius: 10px;
+	padding: 12px 20px 18px 20px;
+	margin: 40px 3px 0 3px;
+	text-align: center;
+	color: #000;
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 1;
+	font-family: 'Nunito', sans-serif;
+}
+
+.banner .offer .content .number-counter .label {
+	font-size: 16px;
+	font-weight: normal;
+	margin-top: 5px;
+	font-family: 'Open Sans', sans-serif;
+}
+.banner .offer .content .x-btn {
+	margin-top: 45px;
+}
+
+/**************************** RESPONSIVE ************************/
+@media (max-width:1199.98px) {
+	.banner {
+		padding-bottom: 0;
+	}
+	.banner:before {
+		content: "";
+		background: rgba(255, 255, 255, 0.2);
+		height: 100%;
+		width: 100%;
+		display: block;
+		position: absolute;
+	}
+	.banner .banner-inner {
+		position: relative;
+		z-index: 1;
+	}
+}
+@media (max-width:991.98px) {
+	.banner {
+		background-image: none;
+	}
+	.banner .offer {
+		text-align: center;
+		display: block;
+		margin-top: 30px;
+	}
+	.banner .offer .content {
+		margin-right: 0;
+	}
+	.banner .offer .img {
+		margin-top: 30px;
+	}
+	.banner .offer .img img {
+		max-width: 350px;
+		width: 100%;
+	}
+}
+@media (max-width: 575.98px) {
+	.banner .offer .content .off-precent {
+		font-size: 160px;
+	}
+	.banner .offer .content .off-precent sup {
+		font-size: 90px;
+	}
+}
+
+/** Start Pricing **/
+.pricing {
+	width: 100%;
+	margin-top: -220px;
+	position: relative;
+	z-index: 1;
+}
+.pricing .pricing-inner {
+	max-width: 1170px;
+	width: 100%;
+	margin: auto;
+}
+.pricing .pricing-inner .content {
+	text-align: center;
+	max-width: 630px;
+	width: 100%;
+	margin: auto;
+}
+.pricing .pricing-inner .content h2 {
+	color: #000;
+	font-size: 40px;
+	font-weight: 700;
+	font-family: 'Nunito', sans-serif;
+}
+.pricing .pricing-inner .content p {
+	margin-top: 20px;
+	margin-bottom: 70px;
+}
+.pricing .pricing-inner .pricing-tables {
+	max-width: 770px;
+	display: flex;
+	margin: auto;
+	position: relative;
+}
+.pricing .pricing-inner .pricing-tables:before {
+	content:url('images/senta-2.png');
+	position: absolute;
+	left: -220px;
+	bottom: 0;
+}
+
+.pricing .pricing-inner .pricing-tables:after {
+	content:url('images/snow-man.png');
+	position: absolute;
+	right: -190px;
+	bottom: 0;
+}
+
+.pricing .pricing-inner .pricing-tables .pricing-table {
+	width: 50%;
+	border: solid 2px #ebebeb;
+	border-radius: 15px;
+	text-align: center;
+	padding: 60px 0 44px 0;
+	z-index: 1;
+	background-color: #fff;
+}
+.pricing .pricing-inner .pricing-tables .table-1 {
+	margin-right: 15px;
+}
+.pricing .pricing-inner .pricing-tables .table-2 {
+	margin-left: 15px;
+}
+.pricing .pricing-inner .pricing-tables .pricing-table .plan-name {
+	color: #000;
+	font-size: 26px;
+	font-weight: 700;
+	font-family: 'Nunito', sans-serif;
+}
+.pricing .pricing-inner .pricing-tables .pricing-table .price {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.pricing-tables .pricing-table .price del {
+	color: #000;
+	font-size: 26px;
+	font-family: 'Open Sans', sans-serif;
+}
+.pricing-tables .pricing-table .price .original {
+	color: #fb2324; 
+	font-size: 60px;
+	font-family: 'Nunito', sans-serif;
+	margin-left: 10px;
+}
+.pricing-tables .pricing-table .time {
+	color: #000; 
+	font-size: 20px;
+	font-family: 'Nunito', sans-serif;
+}
+.pricing-tables .pricing-table ul {
+	list-style: none;
+	margin-top: 40px;
+}
+.pricing-tables .pricing-table ul li {
+	color: #646464;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	padding: 13px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pricing-tables .pricing-table ul li span {
+	position: relative;
+}
+
+.pricing-tables .pricing-table ul li span.check:before {
+	content:url('images/check-mark.png');
+	position: absolute;
+	left: -25px;
+	bottom: 0;
+}
+.pricing-tables .pricing-table ul li span.cross:before {
+	content:url('images/cross-mark.png');
+	position: absolute;
+	left: -25px;
+	bottom: 0;
+}
+.pricing-tables .pricing-table ul li:not(:last-child) {
+	border-bottom: solid 1px #dedede;
+}
+.pricing-tables .pricing-table a {
+	margin-top: 30px;
+}
+.pricing-tables .pricing-table a.secondary {
+	color: #fb2324;
+	background-color: transparent;
+	border: solid 2px #fb2324;
+}
+
+/**************************** RESPONSIVE ************************/
+@media (max-width:1199.98px) {
+	.pricing {
+		margin-top: 0;
+	}
+	.pricing .pricing-inner .pricing-tables:before,
+	.pricing .pricing-inner .pricing-tables:after {
+		display: none;
+	}
+}
+@media (max-width:991.98px) {
+	.pricing .pricing-inner .content p {
+		margin-bottom: 0;
+	}
+	.pricing .pricing-inner .pricing-tables {
+		display: block;
+	}
+	.pricing .pricing-inner .pricing-tables .table-1,
+	.pricing .pricing-inner .pricing-tables .table-2 {
+		margin: auto;
+		max-width: 400px;
+		width: auto;
+		margin-top: 30px;
+	}
+}
