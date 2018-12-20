@@ -732,6 +732,67 @@ img {
 		margin-top: 40px;
 	}
 }
+/** Start FAQ **/
+.faq {
+	width: 100%;
+	padding: 100px 0;
+}
+.faq .faq-inner {
+	max-width: 1170px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.faq .faq-inner .quistions {
+	margin-top: 115px;
+}
+.faq .faq-inner .quistions .quistion {
+	color: #000;
+	font-size: 26px;
+	font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+	background-color: transparent;
+	cursor: pointer;
+	padding: 10px 0;
+	margin-bottom: 30px;
+	width: 100%;
+	text-align: left;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid #c2c2c2;
+	outline: none;
+	transition: 0.4s;
+}
+.faq .faq-inner .quistions .answer {
+	padding: 0 15px;
+}
+.faq .faq-inner .quistions .answer p {
+	color: #565656;
+	margin-bottom: 40px;
+}
+.faq .faq-inner .quistions .answer ul {
+	list-style-position: inside;
+	padding-left: 30px;
+}
+.faq .faq-inner .quistions .answer ul li {
+	color: #565656;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+	padding: 2px 0;
+}
+/**************************** RESPONSIVE ************************/
+@media (max-width: 991.98px) {
+	.faq {
+		width: 100%;
+		padding: 50px 0 0;
+	}
+	.faq .faq-inner .quistions {
+		margin-top: 30px;
+	}
+}
 /** Start Wish **/
 .wish {
 	background-image: url(images/footer-bg.png);
