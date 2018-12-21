@@ -8,6 +8,13 @@ canvas {
 	height: 100%;
 	position: fixed;
 	top: 0;
+	z-index: 1;
+	display: block;
+}
+
+.z-index-plus {
+	position: relative !important;
+	z-index: 99 !important;
 }
 
 img {
@@ -252,7 +259,6 @@ img {
 	width: 100%;
 	margin-top: -220px;
 	position: relative;
-	z-index: 1;
 }
 .pricing .pricing-inner {
 	max-width: 1170px;
@@ -281,6 +287,7 @@ img {
 	position: absolute;
 	left: -220px;
 	bottom: 0;
+	z-index: -1;
 }
 
 .pricing .pricing-inner .pricing-tables:after {
@@ -288,6 +295,7 @@ img {
 	position: absolute;
 	right: -190px;
 	bottom: 0;
+	z-index: -1;
 }
 
 .pricing .pricing-inner .pricing-tables .pricing-table {
@@ -296,7 +304,6 @@ img {
 	border-radius: 15px;
 	text-align: center;
 	padding: 60px 0 44px 0;
-	z-index: 1;
 	background-color: #fff;
 }
 .pricing .pricing-inner .pricing-tables .table-1 {
@@ -511,7 +518,6 @@ img {
 	width: 25%;
 	float: left;
 	box-sizing: border-box;
-	z-index: 1;
 }
 .awesome-features .row .content.content-1 {
 	text-align: right;
