@@ -60,7 +60,7 @@
 				</div>
 				<div class="pricing-tables">
 					<div class="pricing-table table-1">
-						<h2 class="plan-name">Normal</h2>
+						<h2 class="plan-name">Basic</h2>
 						<div class="price">
 							<del>$120</del><div class="original">$59</div>
 						</div>
@@ -75,10 +75,11 @@
 							<li><span class="check">3 Future Templates</span></li>
 							<li><span class="cross">3 Future Templates</span></li>
 						</ul>
-						<a href="#" class="x-btn secondary">Get Started</a>
+						<!--<a href="#" class="x-btn secondary">Get Started</a>-->
+						<a style="min-width:95px" href="javascript:void(0);" onclick="ga('send', 'event', { eventCategory: 'Shop', eventAction: 'Add To Cart', eventLabel: 'Basic Joomla Club Membership'});" class="x-btn secondary btn-jdeshop-addtocart_main" data-options="" data-jdeshop-product-id="14">Join Now</a>
 					</div>
 					<div class="pricing-table table-2">
-						<h2 class="plan-name">Normal</h2>
+						<h2 class="plan-name">Plus</h2> 
 						<div class="price">
 							<del>$175</del><div class="original">$99</div>
 						</div>
@@ -93,7 +94,8 @@
 							<li><span class="check">12 Future Templates</span></li>
 							<li><span class="check">12 Future Templates</span></li>
 						</ul>
-						<a href="#" class="x-btn">Get Started</a>
+						<!--<a href="#" class="x-btn">Get Started</a>-->
+						<a  style="min-width:95px" href="javascript:void(0);" onclick="ga('send', 'event', { eventCategory: 'Shop', eventAction: 'Add To Cart', eventLabel: 'Plus Joomla Club Membership'});" class="x-btn btn-jdeshop-addtocart_main" data-options="" data-jdeshop-product-id="16">Join Now</a>
 					</div>
 				</div>
 			</div>
@@ -388,3 +390,45 @@
 	<!-- End Wrapper -->
   </body>
 </html>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+      (function($){
+        $(function(){
+            $(".btn-jdeshop-addtocart_main").click(function(){
+                var _this = $(this);
+                var _id = _this.data("jdeshop-product-id");
+                $.ajax({
+                    url:"//www.joomdev.com/index.php?option=com_eshop&task=cart.add&id="+_id,
+                    data: {quantity:1,product_id:_id},
+                    method: "POST",
+                    dataType:"JSON",
+                    beforeSend:function(){
+                        _this.html("<img src='//www.joomdev.com/plugins/system/jdeshop/assets/loading_bubble.svg' />");
+                    },
+                    success:function(response){						
+				 
+						if(response.success==true){
+								window.location.href = "//www.joomdev.com/my-account/shopping-cart";	 
+								}
+                        
+                    }
+                });
+            });
+        });
+      })(jQuery);
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-58358321-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-58358321-1');
+</script>
+<!-- start ConvertFox JS code-->
+<script>
+(function(d,h,w){var convertfox=w.convertfox=w.convertfox||[];convertfox.methods=['trackPageView','identify','track','setAppId'];convertfox.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);convertfox.push(e);return convertfox;}};for(var i=0;i<convertfox.methods.length;i++){var c=convertfox.methods[i];convertfox[c]=convertfox.factory(c)}s=d.createElement('script'),s.src="//d3sjgucddk68ji.cloudfront.net/convertfox.min.js",s.async=!0,e=d.getElementsByTagName(h)[0],e.appendChild(s),s.addEventListener('load',function(e){
+
+},!1),convertfox.setAppId("m6l9uhu4"),convertfox.trackPageView()})(document,'head',window);
+</script>
