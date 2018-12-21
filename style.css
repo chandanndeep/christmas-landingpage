@@ -9,7 +9,8 @@ img {
 
 .x-btn {
 	color: #fff;
-    background-color: #fb2324;
+	background-color: #fb2324;
+	min-width: 100px;
 	padding: 15px 48px;
 	border-radius: 160px;
 	display: inline-block;
@@ -485,8 +486,9 @@ img {
 	margin-top: 60px;
 }
 .awesome-features .row .image {
-	width: 50%;
+	width: 52%;
 	float: left;
+	margin: 0 -2%;
 	text-align: center;
 	position: relative;
 }
@@ -494,9 +496,9 @@ img {
 	position: absolute;
     z-index: 9;
     left: 50%;
-    transform: translate(-50%, 0);
-    top: 79px;
-    max-width: 300px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    max-width: 360px;
 }
 /**************************** RESPONSIVE ************************/
 @media (max-width:1199.98px) {
