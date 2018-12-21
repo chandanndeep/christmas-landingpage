@@ -71,8 +71,16 @@ img {
 	background-image: url("images/body-bg.png");
 	background-repeat: no-repeat;
 	background-position: right top;
+	background-size: contain;
 	width: 100%;
 	padding-bottom: 360px;
+	position: relative;
+}
+.banner:before {
+	content: url(images/border-bell.png);
+    position: absolute;
+    left: 20px;
+    top: 0;
 }
 
 .banner .banner-inner {
@@ -151,7 +159,6 @@ img {
 /**************************** RESPONSIVE ************************/
 @media (max-width:1199.98px) {
 	.banner {
-		background-image: none;
 		padding-bottom: 0;
 	}
 	.banner .offer {
@@ -170,6 +177,9 @@ img {
 		width: 100%;
 		padding-bottom: 50px;
 		background-size: cover;
+	}
+	.banner:before {
+		display: none;
 	}
 	.banner .banner-inner .logo {
 		text-align: center;
@@ -212,11 +222,21 @@ img {
 	}
 }
 @media (max-width: 575.98px) {
+	.banner .banner-inner .logo {
+		padding-top: 40px;
+	}
 	.banner .offer .content .off-precent {
-		font-size: 160px;
+		font-size: 128px;
 	}
 	.banner .offer .content .off-precent sup {
-		font-size: 90px;
+		font-size: 62px;
+	}
+	.banner .offer .content .off-precent span {
+		font-size: 42px;
+		margin-left: -55px;
+	}
+	.banner .offer .content .x-btn {
+		margin-top: 30px;
 	}
 }
 
@@ -341,11 +361,17 @@ img {
 }
 .pricing-tables .pricing-table a {
 	margin-top: 30px;
-}
-.pricing-tables .pricing-table a.secondary {
 	color: #fb2324;
 	background-color: transparent;
 	border: solid 2px #fb2324;
+	padding: 13px 46px;
+}
+.pricing-tables .pricing-table a:hover, 
+.pricing-tables .pricing-table a:hover {
+	color: #fff;
+	background-color: #fb2324;
+    padding: 15px 48px;
+	border: 0;
 }
 
 /**************************** RESPONSIVE ************************/
@@ -478,6 +504,7 @@ img {
 	width: 25%;
 	float: left;
 	box-sizing: border-box;
+	z-index: 1;
 }
 .awesome-features .row .content.content-1 {
 	text-align: right;
@@ -720,7 +747,7 @@ img {
 }
 .templates .button {
 	text-align: center;
-	margin-top: 80px;
+	margin-top: 105px;
 }
 /**************************** RESPONSIVE ************************/
 @media (min-width: 992px) {
