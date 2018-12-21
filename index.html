@@ -23,29 +23,30 @@
 						<div class="off-precent">
 							45<sup>%</sup><span>Off</span>
 						</div>
-						<p>There are many variations of passatges many variations</p>
+						<p>There are many variations of passages many variations</p>
 						<div class="number-counter">
 							<div class="days">
-								<div class="count">21</div>
+								<div class="count" id="d">01</div>
 								<div class="label">Days</div>
 							</div>
 							<div class="hours">
-								<div class="count">11</div>
+								<div class="count" id="h">12</div>
 								<div class="label">Hours</div>
 							</div>
 							<div class="minuts">
-								<div class="count">59</div>
-								<div class="label">Minuts</div>
+								<div class="count" id="m">25</div>
+								<div class="label">Minutes</div>
 							</div>
 							<div class="seconds">
-								<div class="count">12</div>
+								<div class="count" id="s">05</div>
 								<div class="label">Seconds</div>
 							</div>
 						</div>
-						<a href="#" class="x-btn">Unlock Offer</a>
+
+						<a href="//www.joomdev.com/join-the-club" class="x-btn">Unlock Offer</a>
 					</div>
 					<div class="img">
-						<img src="images/senta.png" alt="senta"/>
+						<img src="images/santa.png" alt="santa"/>
 					</div>
 				</div>
 			</div>
@@ -329,7 +330,7 @@
 				<div class="heading-content">
 					<h2 class="heading">Discover the real people behind</h2>
 				</div>
-				<a href="#" class="x-btn">Join the Deal</a>
+				<a href="//www.joomdev.com/join-the-club" class="x-btn">Join the Deal</a>
 			</div>
 		</section>
 		<!-- End Join -->
@@ -416,6 +417,32 @@
             });
         });
       })(jQuery);
+</script>
+<script>
+	const comingdate = new Date("Dec 25, 2018 00:00:00");
+	
+	const d = document.getElementById("d");
+	const h = document.getElementById("h");
+	const m = document.getElementById("m");
+	const s = document.getElementById("s");
+	
+	let countdown = setInterval(() => {
+	  const now   = new Date();
+	  const des   = comingdate.getTime() - now.getTime();
+	  const days  = Math.floor(des / (1000 * 60 * 60 * 24));
+	  const hours = Math.floor((des % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	  const mins  = Math.floor((des % (1000 * 60 * 60)) / (1000 * 60));
+	  const secs  = Math.floor((des % (1000 * 60)) / 1000);
+	
+	  d.innerHTML = getTrueNumber(days);
+	  h.innerHTML = getTrueNumber(hours);
+	  m.innerHTML = getTrueNumber(mins);
+	  s.innerHTML = getTrueNumber(secs);
+	
+	  if (countdown <= 0) clearInterval(countdown);
+	}, 1000);
+	
+	const getTrueNumber = x => (x < 10 ? "0" + x : x);
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58358321-1"></script>

@@ -249,7 +249,7 @@ img {
 	position: relative;
 }
 .pricing .pricing-inner .pricing-tables:before {
-	content:url('images/senta-2.png');
+	content:url('images/santa-2.png');
 	position: absolute;
 	left: -220px;
 	bottom: 0;
@@ -726,7 +726,7 @@ img {
 		position: relative;
 	}
 	.templates .template-box .template-outer .template.left:before {
-		content: url(images/senta-left.png);
+		content: url(images/santa-left.png);
 		position: absolute;
 		left:-103px;
 		top: 25px;
@@ -737,14 +737,14 @@ img {
 		left: -103px;
 	}
 	.templates .template-box .template-outer .template.right:after {
-		content: url(images/senta-right.png);
+		content: url(images/santa-right.png);
 		position: absolute;
 		right: -103px;
 		top: 25px;
 		z-index: 1;
 	}
 	.templates .template-box .template-outer .template.top:before {
-		content: url(images/senta-top.png);
+		content: url(images/santa-top.png);
 		position: absolute;
 		display: block;
 		top: -105px;
@@ -753,7 +753,7 @@ img {
 		z-index: 1;
 	}
 	.templates .template-box .template-outer .template.bottom:after {
-		content: url(images/senta-bottom.png);
+		content: url(images/santa-bottom.png);
 		position: absolute;
 		display: block;
 		bottom: -105px;
@@ -804,7 +804,7 @@ img {
     left: 40px;
 }
 .join:after {
-	content: url(images/senta-3.png);
+	content: url(images/santa-3.png);
     position: absolute;
     display: block;
     bottom: 123px;
